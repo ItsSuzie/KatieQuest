@@ -1,0 +1,176 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbpfbjf7qus0u"]
+
+[ext_resource type="PackedScene" uid="uid://c2wm4r12c025i" path="res://Models/Minra Trophy/Minra Cup/Minra_For_Game_Actual.fbx" id="1_0nrmp"]
+[ext_resource type="PackedScene" uid="uid://dybhyxen0kdnm" path="res://Scenes/player_dungeon_controller.tscn" id="1_7oeuk"]
+[ext_resource type="Script" path="res://addons/level_block/level_block_node.gd" id="1_rt1ee"]
+[ext_resource type="Script" path="res://Scripts/Game System Controller/AutoPlayerFollow.gd" id="1_td6ot"]
+[ext_resource type="AudioStream" uid="uid://clp25ymgymm1o" path="res://Assets/Music/Persona (PSP) ost - School Days [Extended].mp3" id="2_k72fc"]
+[ext_resource type="Material" uid="uid://c71yladfjhgud" path="res://addons/level_block/default_material.tres" id="5_gwlwg"]
+[ext_resource type="Texture2D" uid="uid://dul4gcwu55m0b" path="res://addons/level_block/example_tileset.png" id="6_isdxk"]
+
+[node name="DungeonTest" type="Node3D"]
+
+[node name="DungeonSystem_Follow" type="Node3D" parent="." node_paths=PackedStringArray("playerTarget")]
+script = ExtResource("1_td6ot")
+playerTarget = NodePath("../PlayerDungeonController")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="DungeonSystem_Follow"]
+stream = ExtResource("2_k72fc")
+autoplay = true
+panning_strength = 0.0
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="Root Scene" parent="Environment" instance=ExtResource("1_0nrmp")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4, -1, -8)
+
+[node name="GridHolder" type="Node3D" parent="Environment"]
+visible = false
+
+[node name="LevelBlock" type="Node3D" parent="Environment/GridHolder"]
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+east_face = 0
+south_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock2" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+east_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock3" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+east_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock4" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+east_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock5" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+north_face = 0
+east_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock6" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+east_face = 0
+south_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock7" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+east_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock8" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+east_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock9" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+east_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock10" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -8)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+north_face = 0
+east_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock11" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+south_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock12" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+west_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock13" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+west_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock14" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+east_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock15" type="Node3D" parent="Environment/GridHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+script = ExtResource("1_rt1ee")
+material = ExtResource("5_gwlwg")
+texture_sheet = ExtResource("6_isdxk")
+north_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="PlayerDungeonController" parent="." instance=ExtResource("1_7oeuk")]

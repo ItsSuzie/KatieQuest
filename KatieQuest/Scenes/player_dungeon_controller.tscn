@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dybhyxen0kdnm"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerDungeonControllerMine.gd" id="1_vut6y"]
+
+[node name="PlayerDungeonController" type="Node3D"]
+script = ExtResource("1_vut6y")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="rayForward" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -2)
+metadata/_edit_lock_ = true
+
+[node name="rayBack" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, 2)
+metadata/_edit_lock_ = true
+
+[node name="rayLeft" type="RayCast3D" parent="."]
+target_position = Vector3(-2, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="rayRight" type="RayCast3D" parent="."]
+target_position = Vector3(2, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+omni_range = 10.0
+metadata/_edit_lock_ = true
