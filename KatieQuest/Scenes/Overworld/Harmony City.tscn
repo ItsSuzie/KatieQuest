@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8k88ythqswjd"]
+
+[ext_resource type="Texture2D" uid="uid://gsimrq548sk2" path="res://icon.svg" id="1_g8u0b"]
+[ext_resource type="PackedScene" uid="uid://dgorgl4xmk2o4" path="res://Scenes/Overworld/overworld_player.tscn" id="2_ak1b1"]
+
+[node name="HarmonyCity" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(323.5, 492)
+scale = Vector2(25.5703, 22.6274)
+skew = -0.785398
+texture = ExtResource("1_g8u0b")
+
+[node name="OverworldPlayer" parent="." instance=ExtResource("2_ak1b1")]

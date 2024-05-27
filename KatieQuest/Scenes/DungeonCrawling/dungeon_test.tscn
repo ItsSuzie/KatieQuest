@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bbpfbjf7qus0u"]
 
 [ext_resource type="PackedScene" uid="uid://c2wm4r12c025i" path="res://Models/Minra Trophy/Minra Cup/Minra_For_Game_Actual.fbx" id="1_0nrmp"]
-[ext_resource type="PackedScene" uid="uid://dybhyxen0kdnm" path="res://Scenes/player_dungeon_controller.tscn" id="1_7oeuk"]
+[ext_resource type="PackedScene" uid="uid://dybhyxen0kdnm" path="res://Scenes/DungeonCrawling/player_dungeon_controller.tscn" id="1_7oeuk"]
 [ext_resource type="Script" path="res://addons/level_block/level_block_node.gd" id="1_rt1ee"]
 [ext_resource type="Script" path="res://Scripts/Game System Controller/AutoPlayerFollow.gd" id="1_td6ot"]
 [ext_resource type="AudioStream" uid="uid://clp25ymgymm1o" path="res://Assets/Music/Persona (PSP) ost - School Days [Extended].mp3" id="2_k72fc"]

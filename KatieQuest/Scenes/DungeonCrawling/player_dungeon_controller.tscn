@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://dybhyxen0kdnm"]
 
-[ext_resource type="Script" path="res://Scripts/PlayerDungeonControllerMine.gd" id="1_vut6y"]
+[ext_resource type="Script" path="res://Scripts/DungeonCrawler/PlayerDungeonController.gd" id="1_4faim"]
 
 [node name="PlayerDungeonController" type="Node3D"]
-script = ExtResource("1_vut6y")
+script = ExtResource("1_4faim")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 metadata/_edit_lock_ = true
